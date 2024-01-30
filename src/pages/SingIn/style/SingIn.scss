@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 90px;
+
+  @media (max-width: 590px) {
+    margin: 50px;
+  }
+  @media (max-width: 400px) {
+    margin: 30px;
+  }
+}
+
+.error-message {
+  color: red;
+}

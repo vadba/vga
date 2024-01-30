@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Commuters Sans Extra';
+    src: url('./CommutersSans-ExtraLightItalic.eot');
+    src: local('Commuters Sans Extra Light Italic'), local('CommutersSans-ExtraLightItalic'),
+        url('CommutersSans-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('./CommutersSans-ExtraLightItalic.woff2') format('woff2'),
+        url('./CommutersSans-ExtraLightItalic.woff') format('woff'),
+        url('./CommutersSans-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans Semi';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-SemiBold.eot');
+    src: local('Commuters Sans Semi Bold'), local('CommutersSans-SemiBold'),
+        url('CommutersSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-SemiBold.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-SemiBold.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-HeavyItalic.eot');
+    src: local('Commuters Sans Heavy Italic'), local('CommutersSans-HeavyItalic'),
+        url('CommutersSans-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-HeavyItalic.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-HeavyItalic.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-Thin.eot');
+    src: local('Commuters Sans Thin'), local('CommutersSans-Thin'),
+        url('CommutersSans-Thin.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Thin.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Thin.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans Extra';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraLight.eot');
+    src: local('Commuters Sans Extra Light'), local('CommutersSans-ExtraLight'),
+        url('CommutersSans-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraLight.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraLight.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-LightItalic.eot');
+    src: local('Commuters Sans Light Italic'), local('CommutersSans-LightItalic'),
+        url('CommutersSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-LightItalic.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-LightItalic.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-Bold.eot');
+    src: local('Commuters Sans Bold'), local('CommutersSans-Bold'),
+        url('CommutersSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Bold.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Bold.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-Regular.eot');
+    src: local('Commuters Sans'), local('CommutersSans-Regular'),
+        url('CommutersSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Regular.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Regular.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans Extra';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraBoldItalic.eot');
+    src: local('Commuters Sans Extra Bold Italic'), local('CommutersSans-ExtraBoldItalic'),
+        url('CommutersSans-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraBoldItalic.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraBoldItalic.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-BoldItalic.eot');
+    src: local('Commuters Sans Bold Italic'), local('CommutersSans-BoldItalic'),
+        url('CommutersSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-BoldItalic.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-BoldItalic.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-ThinItalic.eot');
+    src: local('Commuters Sans Thin Italic'), local('CommutersSans-ThinItalic'),
+        url('CommutersSans-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ThinItalic.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ThinItalic.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans Semi';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-SemiBoldItalic.eot');
+    src: local('Commuters Sans Semi Bold Italic'), local('CommutersSans-SemiBoldItalic'),
+        url('CommutersSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-SemiBoldItalic.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-SemiBoldItalic.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-Italic.eot');
+    src: local('Commuters Sans Italic'), local('CommutersSans-Italic'),
+        url('CommutersSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Italic.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Italic.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-Heavy.eot');
+    src: local('Commuters Sans Heavy'), local('CommutersSans-Heavy'),
+        url('CommutersSans-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Heavy.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Heavy.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans Extra';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraBold.eot');
+    src: local('Commuters Sans Extra Bold'), local('CommutersSans-ExtraBold'),
+        url('CommutersSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraBold.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraBold.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('client/src/pages/SingUp/style/fonts/CommutersSans-Light.eot');
+    src: local('Commuters Sans Light'), local('CommutersSans-Light'),
+        url('CommutersSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Light.woff2') format('woff2'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Light.woff') format('woff'),
+        url('client/src/pages/SingUp/style/fonts/CommutersSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+

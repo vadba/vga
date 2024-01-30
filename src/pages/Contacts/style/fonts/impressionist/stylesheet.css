@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Impressionist";
+
+  /*src: url("https://db.onlinewebfonts.com/t/7b7503a5ea8c57742d3962493b3fbeae.eot");*/
+  src: url("./theimpressionist.woff")format("woff");
+
+    font-weight: normal;
+    font-style: normal;
+}
