@@ -25,10 +25,10 @@ const Router = () => {
         <Route path="/:category" element={<Category />} />
         <Route path="/:category/:slug" element={<Article />} />
         <Route path="/contacts" element={<Contacts />} />
-        {!users && <Route path="/sing-up" element={<SingUp />} />}
-        {users && singIn && <Route path="/sing-up" element={<SingUp />} />}
-        {users && !singIn && <Route path="/sing-up" element={"No access"} />}
-        {!singIn && (
+        {!users && <Route path="/sing-up" element={<SingUp />} />}{" "}
+        {!users && <Route path="/sing-in" element={"No access"} />}
+        {!!users && !singIn && <Route path="/sing-up" element={"No access"} />}
+        {!!users && !singIn && (
           <>
             <Route path="/sing-in" element={<SingIn />} />
             <Route path="/cabinet" element={"No access"} />
@@ -36,6 +36,7 @@ const Router = () => {
         )}
         {singIn && (
           <>
+            <Route path="/sing-up" element={<SingUp />} />
             <Route path="/cabinet" element={<Cabinet />}>
               <Route index element={"Cabinet"} />
               <Route path="/cabinet/new-post" element={<CreateNewPost />} />

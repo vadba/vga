@@ -1,5 +1,3 @@
-import "./../../tools/findRoxdils";
-import { categories } from "../../tools/findRoxdils.js";
 import {
   FooterContainer,
   FooterCopyRigth,
@@ -20,7 +18,9 @@ import { ImagesList } from "./components/ImageList/ImageList.jsx";
 export const Footer = () => {
   const currentTime = new Date();
   const year = currentTime.getFullYear();
+
   const { users, singIn } = useSelector((state) => state.singInSlice);
+  const { dataCategories } = useSelector((state) => state.categorySlice);
 
   return (
     <FooterWrap>
@@ -30,13 +30,14 @@ export const Footer = () => {
             <FooterLogo alt="logo" src={logo} />
           </NavLink>
           <MenuLink to="/">Home</MenuLink>
-          {categories.map((page) => (
-            <MenuLink key={page.idName} to={page.idName}>
-              {page.name}
-            </MenuLink>
-          ))}
+          {!!dataCategories.length &&
+            dataCategories.map((page) => (
+              <MenuLink key={page.idName} to={page.idName}>
+                {page.name}
+              </MenuLink>
+            ))}
           <MenuLink to="/contacts">Contacts</MenuLink>
-          {users && (
+          {!!users && (
             <>
               <LoginLink to={singIn ? "/cabinet" : "/sing-in"}>
                 <LoginButton variant="contained" color="login">
