@@ -12,15 +12,14 @@ import { mailDefaultPath, mailRouter } from "./src/mail/mailRouter.js";
 
 export const app = express();
 
-app.use(cors());
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
+app.use(express.static(resolve(process.cwd(), "static")));
 
 app.use(userDefaultPath, userRouter);
 app.use(mailDefaultPath, mailRouter);
 app.use(categoriesDefaultPath, categoryRouter);
 app.use(postDefaultPath, postRouter);
-
-app.use(express.static(resolve(process.cwd(), "static")));
 
 app.get("*", (req, res) => {
   res.sendFile(resolve(process.cwd(), "static", "index.html"));
