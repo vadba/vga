@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: `https://vga-api.onrender.com:3004`,
+  baseURL: `https://vga-api.onrender.com/server/`,
   // baseURL: `${process.env.VITE_API_URL}/server/`,
 });
 
