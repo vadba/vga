@@ -1,4 +1,5 @@
 import { Box, styled } from "@mui/system";
+import { useMediaQuery } from "@mui/material";
 
 export const CategoryHeader = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -15,7 +16,9 @@ export const CategoryWrap = styled(Box)(({ theme }) => ({
   margin: "0 auto",
   marginTop: "-105px",
   display: "grid",
-  gridTemplateColumns: "repeat(2,1fr)",
+  gridTemplateColumns: useMediaQuery(theme.breakpoints.up("cm"))
+    ? "repeat(2,1fr)"
+    : "repeat(1,1fr)",
   gridColumnGap: "3%",
   gridRowGap: "4%",
   justifyContent: "center",
