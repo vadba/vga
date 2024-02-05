@@ -7,6 +7,7 @@ import {
   MenuLink,
   menuStyle,
 } from "./style/Header.styled.js";
+// import Preloader from "../../assets/preloader.svg?react";
 import { NavLink } from "react-router-dom";
 import { Box, Container, useTheme } from "@mui/system";
 import logo from "../../assets/logo_newto.png";
@@ -15,6 +16,7 @@ import "./style/Header.scss";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategoriesData } from "../../redux/slice/categorySlice.js";
+import Preloader from "../Preloader/Preloader.jsx";
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -43,65 +45,72 @@ export const Header = () => {
     }
   };
   return (
-    <HeaderWrap>
-      {!matches && (
-        <>
-          {mobileMenu && (
-            <div className="mobileMenuOff" onClick={toggleHambur}></div>
-          )}
-          <div className={openOverlay}>
-            <div className="mobileHeader">
-              <NavLink
-                key="home"
-                to="/"
-                onClick={toggleHambur}
-                className="linkLogoImgModile"
-              >
-                <img alt="logo" src={logo} className="logoImgModile" />
-              </NavLink>
-              <Button onClick={toggleHambur}>&times;</Button>
-            </div>
-            <div className="mobileMenu">
-              {!!dataCategories.length &&
-                dataCategories.map((page) => (
-                  <MenuLink
-                    key={page.idName}
-                    to={page.idName}
+    <>
+      {/*<Preloader />*/}
+      {!dataCategories.length ? (
+        <Preloader />
+      ) : (
+        <HeaderWrap>
+          {!matches && (
+            <>
+              {mobileMenu && (
+                <div className="mobileMenuOff" onClick={toggleHambur}></div>
+              )}
+              <div className={openOverlay}>
+                <div className="mobileHeader">
+                  <NavLink
+                    key="home"
+                    to="/"
                     onClick={toggleHambur}
+                    className="linkLogoImgModile"
                   >
-                    {page.name}
-                  </MenuLink>
-                ))}
-            </div>
-          </div>
-        </>
-      )}
-      <Container sx={HeaderCont}>
-        <Box sx={logoStyle}>
-          <NavLink key="home" to="/">
-            <img alt="logo" src={logo} className="logoImg" />
-          </NavLink>
-        </Box>
-        <Box sx={menuStyle}>
-          {matches ? (
-            <>
-              <MenuLink key="home" to="/">
-                Home
-              </MenuLink>
-              {!!dataCategories.length &&
-                dataCategories.map((page) => (
-                  <MenuLink key={page.idName} to={page.idName}>
-                    {page.name}
-                  </MenuLink>
-                ))}
-            </>
-          ) : (
-            <>
-              <MenuIconMui onClick={toggleHambur} />
+                    <img alt="logo" src={logo} className="logoImgModile" />
+                  </NavLink>
+                  <Button onClick={toggleHambur}>&times;</Button>
+                </div>
+                <div className="mobileMenu">
+                  {!!dataCategories.length &&
+                    dataCategories.map((page) => (
+                      <MenuLink
+                        key={page.idName}
+                        to={page.idName}
+                        onClick={toggleHambur}
+                      >
+                        {page.name}
+                      </MenuLink>
+                    ))}
+                </div>
+              </div>
             </>
           )}
-        </Box>
-      </Container>
-    </HeaderWrap>
+          <Container sx={HeaderCont}>
+            <Box sx={logoStyle}>
+              <NavLink key="home" to="/">
+                <img alt="logo" src={logo} className="logoImg" />
+              </NavLink>
+            </Box>
+            <Box sx={menuStyle}>
+              {matches ? (
+                <>
+                  <MenuLink key="home" to="/">
+                    Home
+                  </MenuLink>
+                  {!!dataCategories.length &&
+                    dataCategories.map((page) => (
+                      <MenuLink key={page.idName} to={page.idName}>
+                        {page.name}
+                      </MenuLink>
+                    ))}
+                </>
+              ) : (
+                <>
+                  <MenuIconMui onClick={toggleHambur} />
+                </>
+              )}
+            </Box>
+          </Container>
+        </HeaderWrap>
+      )}
+    </>
   );
 };

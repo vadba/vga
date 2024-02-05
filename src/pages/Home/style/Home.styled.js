@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { SwiperSlide } from "swiper/react";
 import BgImage from "./../../../assets/whitedoodle.png";
 import { ParallaxBanner } from "react-scroll-parallax";
+import { useMediaQuery } from "@mui/material";
 
 export const SwipSlide = styled(SwiperSlide)(({ theme }) => ({
   position: "relative",
@@ -57,14 +58,16 @@ export const Wrap = styled(Box)(({ theme }) => ({
 
 export const BgImg = styled(Box)(({ theme }) => ({
   position: "absolute",
-  width: "100%",
-  height: "100%",
+  width: useMediaQuery(theme.breakpoints.up("cm")) ? "100%" : "70%",
+  height: useMediaQuery(theme.breakpoints.up("cm")) ? "100%" : "50%",
   top: "0px",
   left: "0px",
   backgroundImage: `url(${BgImage})`,
   backgroundRepeat: "no-repeat",
   backgroundSize: "contain",
-  backgroundPosition: "50% 50%",
+  backgroundPosition: useMediaQuery(theme.breakpoints.up("cm"))
+    ? "50% 50%"
+    : "89% 50%",
   transform: "scale(1.2) translate(0px, 0px) rotate(54deg)",
 }));
 
