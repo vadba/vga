@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 export const Wrap = styled(Box)(({ theme }) => ({
   position: "relative",
   display: "flex",
+  flexDirection: useMediaQuery(theme.breakpoints.up("dc")) ? "row" : "column",
   justifyContent: "center",
   alignItems: "center",
   maxWidth: "970px",
@@ -12,15 +13,16 @@ export const Wrap = styled(Box)(({ theme }) => ({
   padding: "38px 0",
 }));
 export const PictureWrap = styled(Box)(({ theme }) => ({
+  zIndex: "2",
   alignItems: "center",
   position: "relative",
   // top: "50%",
   // left: "0",
   // transform: "translateY(-50%)",
-  zIndex: "2",
   //width: 61%;
   maxWidth: "300px",
   height: "auto",
+  margin: useMediaQuery(theme.breakpoints.up("dc")) ? "0" : "11% 0 11% 0",
 }));
 export const PictureDesc = styled(Box)(({ theme }) => ({
   paddingLeft: "35px",
@@ -63,13 +65,14 @@ export const FormWrap = styled(Box)(({ theme }) => ({
   backgroundColor: `${theme.palette.background.default}`,
 }));
 export const SignatureWrap = styled(Box)(({ theme }) => ({
-  top: "0",
-  right: "0",
+  zIndex: 2,
+  top: useMediaQuery(theme.breakpoints.up("cm")) ? "37px" : "15px",
+  right: useMediaQuery(theme.breakpoints.up("dc")) ? "168px" : "auto",
   position: "absolute",
   transform: "translate(30px, -20px) rotate(-5deg) scale(1.3)",
   fontFamily: "Impressionist",
   // fontFamily: "Great Vibes",
-  fontSize: "40px",
+  fontSize: useMediaQuery(theme.breakpoints.up("dc")) ? "40px" : "30px",
   letterSpacing: "3px",
 }));
 

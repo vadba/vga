@@ -165,8 +165,8 @@ const Contacts = () => {
             </PostForm>
           )}
         </Formik>
-        <SignatureWrap>get in touch</SignatureWrap>
       </FormWrap>
+      <SignatureWrap>get in touch</SignatureWrap>
     </Wrap>
   );
 };
