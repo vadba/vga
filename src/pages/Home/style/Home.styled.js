@@ -111,14 +111,14 @@ export const HomeNewsImgText = styled(Box)(({ theme }) => ({
   transform: "translate(-50%, -50%)",
   width: "80%",
   color: `${theme.palette.login.main}`,
-  fontSize: "44px",
+  fontSize: useMediaQuery(theme.breakpoints.up("cm")) ? "44px" : "35px",
   fontWeight: "bold",
 }));
 
 export const Single = styled(Box)(({ theme }) => ({
   marginTop: "5%",
   fontFamily: "Impressionist",
-  fontSize: "30px",
+  fontSize: "34px",
   color: `${theme.palette.background.paper}`,
 }));
 
