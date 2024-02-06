@@ -22,7 +22,7 @@ export const PictureWrap = styled(Box)(({ theme }) => ({
   //width: 61%;
   maxWidth: "300px",
   height: "auto",
-  margin: useMediaQuery(theme.breakpoints.up("dc")) ? "0" : "11% 0 11% 0",
+  margin: useMediaQuery(theme.breakpoints.up("dc")) ? "0" : "11% 0 50px 0",
 }));
 export const PictureDesc = styled(Box)(({ theme }) => ({
   paddingLeft: "35px",
@@ -58,9 +58,9 @@ export const Single = styled(Box)(({ theme }) => ({
 
 export const FormWrap = styled(Box)(({ theme }) => ({
   position: "relative",
-  width: "34%",
+  width: useMediaQuery(theme.breakpoints.up("cm")) ? "34%" : "70%",
   maxWidth: "400px",
-  padding: "70px 67px",
+  padding: useMediaQuery(theme.breakpoints.up("cm")) ? "70px 67px" : "13% 8%",
   // backgroundColor: "white",
   backgroundColor: `${theme.palette.background.default}`,
 }));
