@@ -59,7 +59,7 @@ export const ImagesList = () => {
         variant="quilted"
         cols={5}
         rowHeight={121}
-        gap={17}
+        gap={5}
       >
         {itemData.map((item) => (
           <ImageListItem

@@ -55,7 +55,7 @@ const Contacts = () => {
           normal business hours of M-F, 9-4pm.
           <br />
           <br />
-          Use the form below or email us at email@email.com
+          Use the form below to send us an email.
         </PictureDesc>
         <SocialIcon>
           <SocialLink to="https://www.facebook.com/" target="_blank">

@@ -25,7 +25,7 @@ export const Digital = () => {
         <Wrap>
           <BgImg></BgImg>
           <HomeWelcomeTitle>
-            Welcome to the Golian's Analytics Blog
+            Welcome to the Holian's Analytics Blog
           </HomeWelcomeTitle>
           <HomeWelcomeText>
             Use this section to tease your brand philosophy before you complete
