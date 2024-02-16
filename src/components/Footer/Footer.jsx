@@ -61,7 +61,8 @@ export const Footer = () => {
             <ImagesList />
           </FooterImg>
           <FooterCopyRigth>
-            © Paper Plane {year}. All rights reserved. | Legal | Made by IDEA.
+            © Vasyl Holian's Analytics Blog, {year}. | All rights reserved. |
+            Made by IDEA.
           </FooterCopyRigth>
         </FooterRigth>
       </FooterContainer>
