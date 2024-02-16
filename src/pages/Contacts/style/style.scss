@@ -6,8 +6,10 @@
 
 .imgContact {
   width: 100%;
+  min-width: 250px;
+  min-height: 250px;
   margin-left: 35px;
-  background-color: #cccccc;
+  background-color: #ccccccc9;
 
   @media (max-width: 430px) {
     margin-left: 0;
