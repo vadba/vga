@@ -31,7 +31,7 @@ const Router = () => {
         {!!users && !singIn && (
           <>
             <Route path="/sing-in" element={<SingIn />} />
-            <Route path="/cabinet" element={"No access"} />
+            <Route path="/cabinet/*" element={"No access"} />
           </>
         )}
         {singIn && (
