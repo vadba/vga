@@ -1,5 +1,6 @@
 import { Box, styled } from "@mui/system";
 import { NavLink } from "react-router-dom";
+import { useMediaQuery } from "@mui/material";
 
 export const TitleBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -18,7 +19,7 @@ export const LogOutBox = styled(Box)(({ theme }) => ({
 }));
 
 export const DashWrap = styled(Box)(({ theme }) => ({
-  display: "flex",
+  display: useMediaQuery(theme.breakpoints.up("md")) ? "flex" : "block",
 }));
 export const Dashboard = styled(Box)(({ theme }) => ({
   display: "flex",
