@@ -6,17 +6,17 @@ import {
   MenuIconMui,
   MenuLink,
   menuStyle,
-} from "./style/Header.styled.js";
+} from './style/Header.styled.js';
 // import Preloader from "../../assets/preloader.svg?react";
-import { NavLink } from "react-router-dom";
-import { Box, Container, useTheme } from "@mui/system";
-import logo from "../../assets/logo_newto.png";
-import { useMediaQuery } from "@mui/material";
-import "./style/Header.scss";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCategoriesData } from "../../redux/slice/categorySlice.js";
-import Preloader from "../Preloader/Preloader.jsx";
+import { NavLink } from 'react-router-dom';
+import { Box, Container, useTheme } from '@mui/system';
+import logo from '../../assets/logo.png';
+import { useMediaQuery } from '@mui/material';
+import './style/Header.scss';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCategoriesData } from '../../redux/slice/categorySlice.js';
+import Preloader from '../Preloader/Preloader.jsx';
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -27,20 +27,20 @@ export const Header = () => {
   }, []);
   const { dataCategories } = useSelector((state) => state.categorySlice);
 
-  const matches = useMediaQuery(theme.breakpoints.up("cm"));
+  const matches = useMediaQuery(theme.breakpoints.up('cm'));
 
   const refresh = () => window.location.reload(true);
 
-  const [openOverlay, setOverlay] = useState("overlay");
+  const [openOverlay, setOverlay] = useState('overlay');
   const [mobileMenu, setMobileMenu] = useState(false);
   const toggleHambur = () => {
-    if (openOverlay === "overlay on") {
-      setOverlay("overlay");
+    if (openOverlay === 'overlay on') {
+      setOverlay('overlay');
       setTimeout(() => {
         setMobileMenu(false);
       }, 800);
     } else {
-      setOverlay("overlay on");
+      setOverlay('overlay on');
       setMobileMenu(true);
     }
   };
@@ -53,17 +53,10 @@ export const Header = () => {
         <HeaderWrap>
           {!matches && (
             <>
-              {mobileMenu && (
-                <div className="mobileMenuOff" onClick={toggleHambur}></div>
-              )}
+              {mobileMenu && <div className="mobileMenuOff" onClick={toggleHambur}></div>}
               <div className={openOverlay}>
                 <div className="mobileHeader">
-                  <NavLink
-                    key="home"
-                    to="/"
-                    onClick={toggleHambur}
-                    className="linkLogoImgModile"
-                  >
+                  <NavLink key="home" to="/" onClick={toggleHambur} className="linkLogoImgModile">
                     <img alt="logo" src={logo} className="logoImgModile" />
                   </NavLink>
                   <Button onClick={toggleHambur}>&times;</Button>
@@ -71,11 +64,7 @@ export const Header = () => {
                 <div className="mobileMenu">
                   {!!dataCategories.length &&
                     dataCategories.map((page) => (
-                      <MenuLink
-                        key={page.idName}
-                        to={page.idName}
-                        onClick={toggleHambur}
-                      >
+                      <MenuLink key={page.idName} to={page.idName} onClick={toggleHambur}>
                         {page.name}
                       </MenuLink>
                     ))}
