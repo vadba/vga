@@ -1,15 +1,15 @@
-import { useSelector } from "react-redux";
-import { Formik } from "formik";
-import { EditForm, Preload } from "../EditPosts/style/EditPosts.styled.js";
-import { ItemWrap, Link, boxButton } from "./style/EditMenu.styled.js";
-import { Button, Checkbox, FormControlLabel } from "@mui/material";
-import { checkbox } from "../CreateNewPost/style/CreateNewPost.styled.js";
-import { Box } from "@mui/system";
-import { button } from "../../pages/SingUp/style/SingUp.styled.js";
-import Skeleton from "@mui/material/Skeleton";
-import { useState } from "react";
-import { request } from "../../tools/request.js";
-import { useNavigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { Formik } from 'formik';
+import { EditForm, Preload } from '../EditPosts/style/EditPosts.styled.js';
+import { ItemWrap, Link, boxButton } from './style/EditMenu.styled.js';
+import { Button, Checkbox, FormControlLabel } from '@mui/material';
+import { checkbox } from '../CreateNewPost/style/CreateNewPost.styled.js';
+import { Box } from '@mui/system';
+import { button } from '../../pages/SingUp/style/SingUp.styled.js';
+import Skeleton from '@mui/material/Skeleton';
+import { useState } from 'react';
+import { request } from '../../tools/request.js';
+import { useNavigate } from 'react-router-dom';
 
 const EditMenu = () => {
   const navigate = useNavigate();
@@ -17,13 +17,13 @@ const EditMenu = () => {
   const { dataCategories } = useSelector((state) => state.categorySlice);
 
   const toAddMemu = () => {
-    navigate("/cabinet/menu/add");
+    navigate('/cabinet/menu/add');
   };
   const onSubmit = async (values, { resetForm }) => {
     if (!!values?.categories[0]) {
       try {
         const { result } = await request({
-          url: "post",
+          url: 'post',
           params: { category: values.categories },
         }).then((result) => result);
 
@@ -40,8 +40,8 @@ const EditMenu = () => {
         if (!!newPosts.length) {
           await newPosts.map((postValues) => {
             request({
-              url: "post",
-              method: "PUT",
+              url: 'post',
+              method: 'PUT',
               body: postValues,
             });
             // const { status } = postResp;
@@ -52,17 +52,17 @@ const EditMenu = () => {
           console.log(id);
           request({
             url: `categories/${id}`,
-            method: "DELETE",
+            method: 'DELETE',
           });
         });
       } catch (e) {
-        console.error("Error deleting product:", e);
+        console.error('Error deleting product:', e);
       }
 
       resetForm();
       setPostEdit(true);
       setTimeout(() => {
-        navigate("/cabinet/menu");
+        navigate('/cabinet/menu');
         window.location.reload(true);
       }, 500);
     }
@@ -76,12 +76,8 @@ const EditMenu = () => {
             {({ values, handleChange, handleBlur }) => (
               <EditForm>
                 {dataCategories.map((item) => (
-                  <ItemWrap key={item.id + "a"}>
-                    <Link
-                      key={item.id + "c"}
-                      to={`${item.id}`}
-                      className="cabLinkItem"
-                    >
+                  <ItemWrap key={item.id + 'a'}>
+                    <Link key={item.id + 'c'} to={`${item.id}`} className="cabLinkItem">
                       {item.name}
                     </Link>
                     <FormControlLabel
@@ -101,16 +97,11 @@ const EditMenu = () => {
                     color="login"
                     sx={button}
                     onClick={toAddMemu}
-                    disabled={!(dataCategories.length < 4)}
+                    disabled={!(dataCategories.length < 3)}
                   >
                     add
                   </Button>
-                  <Button
-                    variant="contained"
-                    type="submit"
-                    color="login"
-                    sx={button}
-                  >
+                  <Button variant="contained" type="submit" color="login" sx={button}>
                     Delelte
                   </Button>
                 </Box>
@@ -124,7 +115,7 @@ const EditMenu = () => {
           </Preload>
         )
       ) : (
-        "Menu deleted"
+        'Menu deleted'
       )}
     </>
   );

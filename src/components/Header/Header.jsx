@@ -82,7 +82,7 @@ export const Header = () => {
               {matches ? (
                 <>
                   <MenuLink key="home" to="/">
-                    Home
+                    Головна
                   </MenuLink>
                   {!!dataCategories.length &&
                     dataCategories.map((page) => (
